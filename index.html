@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zamera Stays | Luxury Hospitality Asset Management Egypt</title>
+<meta name="description" content="Zamera Stays is a boutique luxury hospitality asset management company operating in Cairo and Alexandria, serving landlords and institutions.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+body { margin:0; font-family:'Inter',sans-serif; color:#111; background:#fff; line-height:1.7; }
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding: 18px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.logo { height: 42px; }
+
+nav { display:flex; align-items:center; }
+
+nav a {
+    text-decoration:none;
+    color:#111;
+    margin-left:20px;
+    font-weight:500;
+    font-size:14px;
+}
+
+.menu-toggle {
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+.hero {
+    height:95vh;
+    background:url('cairo-hero.png') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+    margin-top:80px;
+}
+
+.hero-content { max-width:700px; color:#fff; }
+
+.hero h1 {
+    font-family:'Playfair Display',serif;
+    font-size:56px;
+    margin-bottom:20px;
+}
+
+.section { padding:100px 8%; }
+
+.section h2 {
+    font-family:'Playfair Display',serif;
+    font-size:36px;
+    margin-bottom:25px;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.card img {
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.light-bg { background:#f5f5f5; }
+
+.dark {
+    background:#111;
+    color:#fff;
+}
+
+.dark a { color:#fff; }
+
+footer {
+    padding:60px 8%;
+    background:#000;
+    color:#fff;
+    font-size:14px;
+}
+
+@media (max-width: 992px) {
+
+    nav {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        padding: 40px 20px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.05);
+        transform: translateX(100%);
+        transition: 0.3s;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    nav a {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav id="navMenu">
+<img src="logo.jpg" alt="Zamera Stays Logo" class="logo">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#cities">Cities</a>
+<a href="#owners">For Owners</a>
+<a href="#governance">Governance</a>
+<a href="#contact">Contact</a>
+<a href="ar.html">العربية</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Luxury Hospitality Asset Management</h1>
+<p>
+Zamera Stays manages premium furnished residential assets in Cairo and Alexandria under disciplined institutional standards. 
+Our approach combines hospitality precision with real estate asset stewardship.
+</p>
+</div>
+</section>
+
+<section class="section" id="about">
+<h2>About Zamera Stays</h2>
+<p>
+Zamera Stays is a boutique hospitality asset management company established to elevate furnished residential properties 
+into professionally structured short term rental assets. We operate selectively, prioritizing quality over scale, 
+and focusing on properties that meet defined aesthetic, operational, and locational benchmarks.
+</p>
+<p>
+Our model integrates operational oversight, market positioning, preventive asset care, and regulatory awareness. 
+We believe disciplined management is the foundation of sustainable performance. 
+Each property is evaluated individually and onboarded through structured documentation and compliance procedures.
+</p>
+<p>
+Rather than pursuing volume driven growth, Zamera Stays emphasizes curated portfolio development. 
+This ensures consistency across all managed assets, protects brand integrity, and safeguards owner interests. 
+We operate with long term alignment in mind, building structured partnerships grounded in transparency and performance accountability.
+</p>
+<img src="about-interior.png" style="width:50%; margin-top:40px;">
+</section>
+
+<section class="section light-bg" id="services">
+<h2>Core Services</h2>
+<div class="grid">
+
+<div class="card">
+<img src="service-operations.png">
+<h3>Operational Oversight</h3>
+<p>
+Our operational management framework includes guest coordination protocols, housekeeping standards, 
+inspection cycles, and performance reporting systems. We implement structured checklists, quality control reviews, 
+and documented procedures to maintain consistency across all units.
+</p>
+<p>
+Regular monitoring ensures properties remain aligned with presentation standards, 
+operational discipline, and owner expectations. Structured reporting provides clarity and visibility.
+</p>
+</div>
+
+<div class="card">
+<img src="service-branding.png">
+<h3>Brand & Positioning</h3>
+<p>
+Each asset undergoes strategic positioning through professional photography, pricing discipline, 
+and controlled brand presentation. We ensure visual uniformity and premium perception across platforms.
+</p>
+<p>
+Our approach avoids casual listing practices. Instead, we maintain curated representation, 
+balanced occupancy strategies, and calibrated pricing aligned with asset quality.
+</p>
+</div>
+
+<div class="card">
+<img src="service-maintenance.png">
+<h3>Asset Protection</h3>
+<p>
+Preventive maintenance is embedded into our management model. Structured inspections, 
+condition monitoring, and coordinated service scheduling reduce long term deterioration risk.
+</p>
+<p>
+We prioritize preservation of finishes, furnishings, and structural integrity, 
+recognizing that asset longevity directly impacts financial performance.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="portfolio">
+<h2>Portfolio Standards</h2>
+<p>
+Every property managed by Zamera Stays must meet defined aesthetic, furnishing, and operational criteria. 
+Uniformity and consistency define our portfolio identity. We maintain curated interior standards 
+that reflect refined residential quality rather than transient accommodation.
+</p>
+<p>
+Lighting balance, material selection, layout coherence, and presentation discipline 
+are reviewed prior to onboarding. This ensures portfolio integrity and reinforces long term brand positioning.
+</p>
+
+<div class="grid">
+<img src="portfolio-1.png" style="width: 100%;">
+<img src="portfolio-2.png" style="width: 100%;">
+<img src="portfolio-3.png" style="width: 100%;">
+</div>
+</section>
+
+<section class="section light-bg" id="cities">
+<h2>Operating Cities</h2>
+<div class="grid">
+
+<div>
+<img src="cairo-skyline.png" style="width: 100%;">
+<h3>Cairo</h3>
+<p>
+In Cairo, Zamera Stays focuses on premium districts, structured residential compounds, 
+and new urban developments that align with institutional residential standards.
+</p>
+<p>
+Our presence in the capital reflects a commitment to refined positioning, 
+modern infrastructure, and strategically located assets.
+</p>
+</div>
+
+<div>
+<img src="alexandria-seafront.png" style="width: 100%;">
+<h3>Alexandria</h3>
+<p>
+In Alexandria, we selectively manage waterfront and central residential properties 
+that demonstrate architectural quality and stable demand fundamentals.
+</p>
+<p>
+Our approach emphasizes disciplined oversight and long term preservation 
+within refined Mediterranean urban environments.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section dark" id="governance">
+<h2>Governance & Compliance</h2>
+<p>
+Zamera Stays operates with structured documentation, procedural oversight, and disciplined reporting standards. 
+We maintain clear onboarding documentation, service records, inspection logs, and performance reviews.
+</p>
+<p>
+Our governance framework emphasizes transparency, regulatory awareness, 
+and operational accountability. Structured processes reduce operational ambiguity 
+and provide owners with measurable clarity.
+</p>
+<p>
+We believe responsible hospitality management requires defined systems, 
+documented controls, and continuous refinement of operational protocols.
+</p>
+</section>
+
+<section class="section" id="contact">
+<h2>Contact</h2>
+<p>
+For partnership discussions, institutional inquiries, or property onboarding considerations, 
+please contact us directly.
+</p>
+<p>Email: <a href="mailto:info@zamera-stays.com">info@zamera-stays.com</a></p>
+<p>WhatsApp: +20 XXX XXX XXXX</p>
+<p>Address: [Office Address Placeholder], Egypt</p>
+</section>
+
+<footer>
+<p>© 2026 Zamera Stays. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
