@@ -1,0 +1,233 @@
+/* ----------------------------- */
+/* PAGE SETUP */
+/* ----------------------------- */
+
+@page {
+    size: A4;
+    margin: 2.5cm;
+
+    @bottom-center {
+        content: "Page " counter(page) " of " counter(pages);
+        font-size: 9pt;
+        color: #666;
+    }
+}
+
+/* ----------------------------- */
+/* GLOBAL STYLES */
+/* ----------------------------- */
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #222;
+}
+
+p {
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+/* ----------------------------- */
+/* HEADINGS */
+/* ----------------------------- */
+
+h1 {
+    font-size: 24pt;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 16pt;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 13pt;
+    margin-top: 20px;
+}
+
+/* Prevent headings from splitting across pages */
+
+h1, h2, h3 {
+    page-break-after: avoid;
+}
+
+/* ----------------------------- */
+/* COVER PAGE */
+/* ----------------------------- */
+
+.cover-page {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cover-title {
+    font-size: 36pt;
+    font-weight: bold;
+}
+
+.cover-subtitle {
+    font-size: 16pt;
+    margin-top: 20px;
+}
+
+.cover-meta {
+    margin-top: 40px;
+    font-size: 12pt;
+}
+
+/* ----------------------------- */
+/* SECTIONS */
+/* ----------------------------- */
+
+.section {
+    margin-top: 30px;
+}
+
+.section-title {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 6px;
+}
+
+/* ----------------------------- */
+/* PAGE BREAKS */
+/* ----------------------------- */
+
+.page-break {
+    page-break-before: always;
+}
+
+.no-break {
+    page-break-inside: avoid;
+}
+
+/* ----------------------------- */
+/* TABLES */
+/* ----------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Avoid splitting tables */
+
+table {
+    page-break-inside: avoid;
+}
+
+/* ----------------------------- */
+/* LISTS */
+/* ----------------------------- */
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* ----------------------------- */
+/* IMAGES */
+/* ----------------------------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Charts or diagrams */
+
+.figure {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.figure-caption {
+    font-size: 9pt;
+    color: #666;
+}
+
+/* ----------------------------- */
+/* INFO TABLE */
+/* ----------------------------- */
+
+.info-table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.info-table td {
+    padding: 6px 4px;
+}
+
+.info-table td:first-child {
+    font-weight: bold;
+    width: 180px;
+}
+
+/* ----------------------------- */
+/* FOOTER NOTES */
+/* ----------------------------- */
+
+.footer-note {
+    font-size: 9pt;
+    color: #777;
+    margin-top: 40px;
+}
+
+/* ----------------------------- */
+/* TIMELINE / GANTT IMAGE */
+/* ----------------------------- */
+
+.gantt-chart {
+    margin-top: 20px;
+}
+
+/* ----------------------------- */
+/* SMALL TEXT */
+/* ----------------------------- */
+
+.small {
+    font-size: 9pt;
+}
+
+/* ----------------------------- */
+/* ALIGNMENT */
+/* ----------------------------- */
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
