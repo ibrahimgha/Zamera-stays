@@ -1,0 +1,5 @@
+I improved the site’s mobile presentation by fixing how the large content images scale on small screens in both [index.html](/srv/worktrees/zamera-stays/57/index.html) and [ar.html](/srv/worktrees/zamera-stays/57/ar.html). The `About` image is now properly responsive instead of being locked to `50%`, the portfolio and city images now use consistent aspect ratios, and spacing/type sizes tighten up below tablet and phone breakpoints so those sections read more cleanly on mobile.
+
+I also added `alt` text to the main content images while touching the markup, which improves accessibility at essentially no risk.
+
+Verification: I checked the rendered diff and confirmed the new selectors and updated image markup are present. `xmllint` was not installed in this environment, so I could not run that HTML validation command.

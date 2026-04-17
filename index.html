@@ -72,10 +72,27 @@ nav a {
     gap:40px;
 }
 
+.grid img {
+    width: 100%;
+    display: block;
+}
+
 .card img {
     width:100%;
     height:280px;
     object-fit:cover;
+}
+
+.about-image {
+    width: min(100%, 720px);
+    display: block;
+    margin-top: 40px;
+}
+
+.portfolio-grid img,
+.city-card img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
 }
 
 .light-bg { background:#f5f5f5; }
@@ -120,6 +137,43 @@ footer {
 
     .menu-toggle {
         display: block;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .section {
+        padding: 80px 8%;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        min-height: 78vh;
+        padding: 0 6%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .section {
+        padding: 72px 6%;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+    .grid {
+        gap: 24px;
+    }
+
+    .card img,
+    .portfolio-grid img,
+    .city-card img {
+        height: 220px;
     }
 }
 </style>
@@ -169,7 +223,7 @@ Rather than pursuing volume driven growth, Zamera Stays emphasizes curated portf
 This ensures consistency across all managed assets, protects brand integrity, and safeguards owner interests. 
 We operate with long term alignment in mind, building structured partnerships grounded in transparency and performance accountability.
 </p>
-<img src="about-interior.png" style="width:50%; margin-top:40px;">
+<img src="about-interior.png" alt="Refined Zamera Stays interior" class="about-image">
 </section>
 
 <section class="section light-bg" id="services">
@@ -231,10 +285,10 @@ Lighting balance, material selection, layout coherence, and presentation discipl
 are reviewed prior to onboarding. This ensures portfolio integrity and reinforces long term brand positioning.
 </p>
 
-<div class="grid">
-<img src="portfolio-1.png" style="width: 100%;">
-<img src="portfolio-2.png" style="width: 100%;">
-<img src="portfolio-3.png" style="width: 100%;">
+<div class="grid portfolio-grid">
+<img src="portfolio-1.png" alt="Zamera Stays portfolio apartment living area">
+<img src="portfolio-2.png" alt="Zamera Stays portfolio bedroom with premium finishes">
+<img src="portfolio-3.png" alt="Zamera Stays portfolio interior design details">
 </div>
 </section>
 
@@ -242,8 +296,8 @@ are reviewed prior to onboarding. This ensures portfolio integrity and reinforce
 <h2>Operating Cities</h2>
 <div class="grid">
 
-<div>
-<img src="cairo-skyline.png" style="width: 100%;">
+<div class="city-card">
+<img src="cairo-skyline.png" alt="Cairo skyline">
 <h3>Cairo</h3>
 <p>
 In Cairo, Zamera Stays focuses on premium districts, structured residential compounds, 
@@ -255,8 +309,8 @@ modern infrastructure, and strategically located assets.
 </p>
 </div>
 
-<div>
-<img src="alexandria-seafront.png" style="width: 100%;">
+<div class="city-card">
+<img src="alexandria-seafront.png" alt="Alexandria seafront">
 <h3>Alexandria</h3>
 <p>
 In Alexandria, we selectively manage waterfront and central residential properties 

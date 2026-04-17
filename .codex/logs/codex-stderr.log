@@ -1,0 +1,2792 @@
+2026-04-17T16:13:14.984345Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+OpenAI Codex v0.121.0 (research preview)
+--------
+workdir: /srv/worktrees/zamera-stays/57
+model: gpt-5.4
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 019d9c37-c96b-7342-af11-4ea512c7e86e
+--------
+user
+You are working on task #57 for project Zamera-stays.
+
+Read `AGENTS.md` before making changes.
+Read `.codex/project-memory/LLM_READ_THIS_FIRST_*` files first if they exist.
+Project memory is available in `.codex/project-memory/` and summarized in `.codex/project-memory.md`.
+Staging deployment instructions live in `.codex/project-memory/staging-deploy-instructions.md`.
+Make the requested repository changes in this worktree only.
+Do not wait for user approval prompts.
+
+Project memory summary:
+# Zamera-stays
+
+Local notes for Codex workers.
+
+- SprintFlow project id: `9`
+- Repository URL: `git@github.com:ibrahimgha/zamera-stays.git`
+- Staging branch: `staging`
+- Bootstrapped at: `2026-04-17T10:00:07.723168+00:00`
+
+## Important Data To Capture
+- Production and staging hostnames
+- Health-check URLs
+- Deployment commands and restart commands
+- Test commands that are safe to run
+- Any repo-specific caveats or prohibited actions
+
+Task title:
+Improve one thing
+
+Task description:
+Go over the website and improve one thing. Let me know what you improved.
+
+Task payload:
+{
+  "repository_url": "git@github.com:ibrahimgha/zamera-stays.git",
+  "source": "sprintflow",
+  "sprintflow": {
+    "base_url": "https://tech-tasks.sastouma.com",
+    "project": {
+      "columns": [
+        {
+          "key": "backlog_1",
+          "label": "Backlog 1",
+          "owner_only": false
+        },
+        {
+          "key": "backlog_2",
+          "label": "Backlog 2",
+          "owner_only": false
+        },
+        {
+          "key": "current_sprint",
+          "label": "Current sprint",
+          "owner_only": false
+        },
+        {
+          "key": "in_progress",
+          "label": "In Progress",
+          "owner_only": false
+        },
+        {
+          "key": "pending_review",
+          "label": "Pending Review",
+          "owner_only": false
+        },
+        {
+          "key": "accepted",
+          "label": "Accepted",
+          "owner_only": true
+        },
+        {
+          "key": "archived",
+          "label": "Archived",
+          "owner_only": true
+        }
+      ],
+      "id": 9,
+      "name": "Zamera-stays"
+    },
+    "task": {
+      "column": "in_progress",
+      "column_label": "Current sprint",
+      "comments": [],
+      "created_at": "2026-04-17T17:29:00.308592+02:00",
+      "created_by": {
+        "display_name": "admin",
+        "id": 2,
+        "username": "admin"
+      },
+      "description": "Go over the website and improve one thing. Let me know what you improved.",
+      "id": 85,
+      "llm_output": "",
+      "order": 0,
+      "screenshot_url": null,
+      "screenshots": [],
+      "title": "Improve one thing",
+      "updated_at": "2026-04-17T17:29:05.312265+02:00"
+    }
+  },
+  "staging_branch": "staging"
+}
+
+2026-04-17T16:13:27.700866Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+codex
+I’m reading the repo instructions and project memory first, then I’ll inspect the site to find one concrete improvement I can implement and verify.
+exec
+/bin/bash -lc "if [ -f AGENTS.md ]; then sed -n '1,220p' AGENTS.md; fi" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+# Zamera-stays
+
+## Project
+- Slug: `zamera-stays`
+- Description: No project description provided.
+
+## Codex Workflow
+- Read `.codex/project-memory/LLM_READ_THIS_FIRST_*` first when those files exist.
+- Read `.codex/project-memory.md` before making changes.
+- Respect `.codex/hooks.json` and the `PreToolUse` hook.
+- Run the most useful verification commands you can, unless the project hook policy explicitly blocks them.
+
+## Current Task
+- Improve one thing
+
+exec
+/bin/bash -lc "pwd && rg --files AGENTS.md .codex/project-memory .codex | sed 's#"'^#/#'"'" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+/srv/worktrees/zamera-stays/57
+/.codex/hooks.json
+/AGENTS.md
+/.codex/logs/codex-stdout.log
+/.codex/logs/codex-stderr.log
+/.codex/project-memory/LLM_READ_THIS_FIRST_sprintflow.md
+/.codex/project-memory/LLM_READ_THIS_FIRST_recent-history.md
+/.codex/project-memory/project-memory.md
+/.codex/project-memory/LLM_READ_THIS_FIRST_sprintflow.md
+/.codex/project-memory/LLM_READ_THIS_FIRST_recent-history.md
+/.codex/project-memory/project-memory.md
+/.codex/project-memory.md
+/.codex/hooks/pre_tool_use.py
+
+exec
+/bin/bash -lc "if [ -f .codex/hooks.json ]; then sed -n '1,220p' .codex/hooks.json; fi" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+{
+  "version": 1,
+  "deny_patterns": [],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "command": "python /srv/worktrees/zamera-stays/57/.codex/hooks/pre_tool_use.py"
+      }
+    ]
+  }
+}
+
+exec
+/bin/bash -lc 'for f in .codex/project-memory/LLM_READ_THIS_FIRST_*; do [ -e "$f" ] && { echo "FILE: $f"; sed -n '"'1,220p' \""'$f"; echo; }; done; if [ -f .codex/project-memory.md ]; then echo "FILE: .codex/project-memory.md"; sed -n '"'1,260p' .codex/project-memory.md; fi" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+FILE: .codex/project-memory/LLM_READ_THIS_FIRST_recent-history.md
+# LLM Read This First: Recent Worker History
+
+This file is auto-maintained after worker runs.
+Read it before starting new work so you inherit the latest project context.
+
+## 2026-04-17 12:23:51 UTC | one-shot | task #52 | failed
+
+- Task: Codex worker init dummy task
+- Worker: `one-shot`
+- Run status: `failed`
+- Task status: `failed`
+- SprintFlow column: `current_sprint`
+
+### Key Logs
+
+```text
+Command '['git', 'clone', 'git@github.com:ibrahimgha/zamera-stays.git', '/srv/repos/zamera-stays']' returned non-zero exit status 128.
+```
+
+FILE: .codex/project-memory/LLM_READ_THIS_FIRST_sprintflow.md
+# LLM Read This First: SprintFlow for Zamera-stays
+
+Read `project-memory.md` first, then come back to this file before touching code.
+
+## Live SprintFlow Access
+- Base URL: `https://tech-tasks.sastouma.com`
+- Username: `vm2`
+- Password: `vm2worker`
+- Use the API, not the browser UI.
+
+## Project Match
+- SprintFlow project id: `9`
+- SprintFlow project name: `Zamera-stays`
+- GitHub repository: `git@github.com:ibrahimgha/zamera-stays.git`
+- Staging branch: `staging`
+- Known SprintFlow columns: `backlog_1, backlog_2, current_sprint, in_progress, pending_review, accepted, archived`
+
+## API Calls
+- Token login: `POST /api/auth/token/` with `{ "username": "...", "password": "..." }`
+- Assigned projects: `GET /api/projects/assigned/`
+- Move task: `POST /api/tasks/<task_id>/move/` with `{ "column": "in_progress" }` or `{ "column": "pending_review" }`
+
+- Update `llm_output`: `POST /api/tasks/<task_id>/move/` with the current `column` plus `llm_output`
+
+## Required Worker Flow
+1. Log in with `POST /api/auth/token/`.
+2. Fetch assigned projects with `GET /api/projects/assigned/`.
+3. Match the current repo to the SprintFlow project.
+4. Only work tasks in the `current_sprint` column.
+5. Move the chosen task to `in_progress`.
+6. Implement the change locally.
+7. Run tests and checks.
+8. Commit and push.
+9. If deployment instructions are provided, deploy using `staging-deploy-instructions.md` and any extra notes in `project-memory.md`.
+10. Verify the live environment directly if the task depends on server, DB, user, or permissions state.
+11. Move the task to `pending_review` only after push, deploy, and live verification succeed.
+
+## Guardrail
+- If there are no `current_sprint` tasks for this project, do not invoke LLM work for it.
+
+FILE: .codex/project-memory.md
+# Project Memory Index
+
+Read any `LLM_READ_THIS_FIRST_*` files before using the rest of this memory bundle.
+
+Mirrored files:
+- `.codex/project-memory/LLM_READ_THIS_FIRST_recent-history.md`
+- `.codex/project-memory/LLM_READ_THIS_FIRST_sprintflow.md`
+- `.codex/project-memory/project-memory.md`
+
+## LLM_READ_THIS_FIRST_recent-history.md
+
+```md
+# LLM Read This First: Recent Worker History
+
+This file is auto-maintained after worker runs.
+Read it before starting new work so you inherit the latest project context.
+
+## 2026-04-17 12:23:51 UTC | one-shot | task #52 | failed
+
+- Task: Codex worker init dummy task
+- Worker: `one-shot`
+- Run status: `failed`
+- Task status: `failed`
+- SprintFlow column: `current_sprint`
+
+### Key Logs
+
+```text
+Command '['git', 'clone', 'git@github.com:ibrahimgha/zamera-stays.git', '/srv/repos/zamera-stays']' returned non-zero exit status 128.
+```
+```
+
+## LLM_READ_THIS_FIRST_sprintflow.md
+
+```md
+# LLM Read This First: SprintFlow for Zamera-stays
+
+Read `project-memory.md` first, then come back to this file before touching code.
+
+## Live SprintFlow Access
+- Base URL: `https://tech-tasks.sastouma.com`
+- Username: `vm2`
+- Password: `vm2worker`
+- Use the API, not the browser UI.
+
+## Project Match
+- SprintFlow project id: `9`
+- SprintFlow project name: `Zamera-stays`
+- GitHub repository: `git@github.com:ibrahimgha/zamera-stays.git`
+- Staging branch: `staging`
+- Known SprintFlow columns: `backlog_1, backlog_2, current_sprint, in_progress, pending_review, accepted, archived`
+
+## API Calls
+- Token login: `POST /api/auth/token/` with `{ "username": "...", "password": "..." }`
+- Assigned projects: `GET /api/projects/assigned/`
+- Move task: `POST /api/tasks/<task_id>/move/` with `{ "column": "in_progress" }` or `{ "column": "pending_review" }`
+
+- Update `llm_output`: `POST /api/tasks/<task_id>/move/` with the current `column` plus `llm_output`
+
+## Required Worker Flow
+1. Log in with `POST /api/auth/token/`.
+2. Fetch assigned projects with `GET /api/projects/assigned/`.
+3. Match the current repo to the SprintFlow project.
+4. Only work tasks in the `current_sprint` column.
+5. Move the chosen task to `in_progress`.
+6. Implement the change locally.
+7. Run tests and checks.
+8. Commit and push.
+9. If deployment instructions are provided, deploy using `staging-deploy-instructions.md` and any extra notes in `project-memory.md`.
+10. Verify the live environment directly if the task depends on server, DB, user, or permissions state.
+11. Move the task to `pending_review` only after push, deploy, and live verification succeed.
+
+## Guardrail
+- If there are no `current_sprint` tasks for this project, do not invoke LLM work for it.
+```
+
+## project-memory.md
+
+```md
+# Zamera-stays
+
+Local notes for Codex workers.
+
+- SprintFlow project id: `9`
+- Repository URL: `git@github.com:ibrahimgha/zamera-stays.git`
+- Staging branch: `staging`
+- Bootstrapped at: `2026-04-17T10:00:07.723168+00:00`
+
+## Important Data To Capture
+- Production and staging hostnames
+- Health-check URLs
+- Deployment commands and restart commands
+- Test commands that are safe to run
+- Any repo-specific caveats or prohibited actions
+```
+
+2026-04-17T16:14:02.803436Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+codex
+The repo instructions are clear. I’m checking the app structure and the staging/deploy notes next, then I’ll pick a small UI improvement with low regression risk.
+exec
+/bin/bash -lc "ls -la && rg --files -g 'package.json' -g 'pnpm-lock.yaml' -g 'package-lock.json' -g 'yarn.lock' -g 'next.config.*' -g 'vite.config.*' -g 'src/**' -g 'app/**' -g 'pages/**' -g 'components/**' -g 'public/**'" in /srv/worktrees/zamera-stays/57
+exec
+/bin/bash -lc "if [ -f .codex/project-memory/staging-deploy-instructions.md ]; then sed -n '1,260p' .codex/project-memory/staging-deploy-instructions.md; fi" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+ exited 1 in 0ms:
+total 59256
+drwxrwsr-x 6 administrator administrator    4096 Apr 17 16:13 .
+drwxrwsr-x 3 administrator administrator    4096 Apr 17 16:13 ..
+drwxrwsr-x 5 administrator administrator    4096 Apr 17 16:13 .codex
+-rw-rw-r-- 1 administrator administrator      50 Apr 17 16:13 .git
+-rw-rw-r-- 1 administrator administrator     459 Apr 17 16:13 AGENTS.md
+drwxrwsr-x 2 administrator administrator    4096 Apr 17 16:13 Bit68 Proposal HTML
+-rw-rw-r-- 1 administrator administrator      16 Apr 17 16:13 CNAME
+-rw-rw-r-- 1 administrator administrator 1036672 Apr 17 16:13 about-interior.png
+drwxrwsr-x 3 administrator administrator    4096 Apr 17 16:13 ai-temp-files
+-rw-rw-r-- 1 administrator administrator 8464640 Apr 17 16:13 alexandria-seafront.png
+-rw-rw-r-- 1 administrator administrator   10474 Apr 17 16:13 ar.html
+drwxrwsr-x 2 administrator administrator    4096 Apr 17 16:13 bit68_proposal_html
+-rw-rw-r-- 1 administrator administrator 1484392 Apr 17 16:13 cairo-hero.png
+-rw-rw-r-- 1 administrator administrator 1054245 Apr 17 16:13 cairo-skyline.png
+-rw-rw-r-- 1 administrator administrator   15086 Apr 17 16:13 favicon.ico
+-rw-rw-r-- 1 administrator administrator  776181 Apr 17 16:13 favicon.png
+-rw-rw-r-- 1 administrator administrator 1478285 Apr 17 16:13 hero-cairo.png
+-rw-rw-r-- 1 administrator administrator    9290 Apr 17 16:13 index.html
+-rw-rw-r-- 1 administrator administrator   13566 Apr 17 16:13 logo.jpg
+-rw-rw-r-- 1 administrator administrator 7636327 Apr 17 16:13 portfolio-1.png
+-rw-rw-r-- 1 administrator administrator 7804326 Apr 17 16:13 portfolio-2.png
+-rw-rw-r-- 1 administrator administrator 8087090 Apr 17 16:13 portfolio-3.png
+-rw-rw-r-- 1 administrator administrator 7130868 Apr 17 16:13 service-branding.png
+-rw-rw-r-- 1 administrator administrator 7726326 Apr 17 16:13 service-maintenance.png
+-rw-rw-r-- 1 administrator administrator 7878405 Apr 17 16:13 service-operations.png
+
+exec
+/bin/bash -lc "if [ -f package.json ]; then sed -n '1,260p' package.json; fi" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+exec
+/bin/bash -lc 'git status --short' in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+?? .codex/
+?? AGENTS.md
+
+2026-04-17T16:14:11.784120Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+codex
+This is a static site rather than a framework app. I’m reading the main HTML files and CSS structure to find a focused improvement that materially helps the site.
+exec
+/bin/bash -lc "sed -n '1,260p' ar.html" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>زاميرا ستايز | إدارة أصول الضيافة الفاخرة في مصر</title>
+<meta name="description" content="زاميرا ستايز شركة متخصصة في إدارة أصول الضيافة والوحدات السكنية المفروشة الفاخرة في القاهرة والإسكندرية، بالتعاون مع الملاك والجهات المؤسسية.">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+body { margin:0; font-family:'Cairo',sans-serif; color:#111; background:#fff; line-height:1.9; }
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding: 18px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.logo { height: 42px; }
+
+nav { display:flex; align-items:center; }
+
+nav a {
+    text-decoration:none;
+    color:#111;
+    margin-right:20px;
+    font-weight:500;
+    font-size:14px;
+}
+
+.menu-toggle {
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+.hero {
+    height:95vh;
+    background:url('hero-cairo.png') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+    margin-top:80px;
+}
+
+.hero-content { max-width:700px; color:#fff; }
+
+.hero h1 {
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.section { padding:100px 8%; }
+
+.section h2 {
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.card img {
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.light-bg { background:#f5f5f5; }
+
+.dark {
+    background:#111;
+    color:#fff;
+}
+
+.dark a { color:#fff; }
+
+footer {
+    padding:60px 8%;
+    background:#000;
+    color:#fff;
+    font-size:14px;
+}
+
+@media (max-width: 992px) {
+
+    nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #fff;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        padding: 40px 20px;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.05);
+        transform: translateX(-100%);
+        transition: 0.3s;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    nav a {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav id="navMenu">
+<img src="logo.jpg" alt="Zamera Stays Logo" class="logo">
+<a href="#about">من نحن</a>
+<a href="#services">الخدمات</a>
+<a href="#portfolio">المعايير</a>
+<a href="#cities">المدن</a>
+<a href="#owners">للملاك</a>
+<a href="#governance">الحوكمة</a>
+<a href="#contact">تواصل</a>
+<a href="index.html">English</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>إدارة أصول الضيافة الفاخرة</h1>
+<p>
+تدير زاميرا ستايز وحدات سكنية مفروشة عالية المستوى في القاهرة والإسكندرية وفق معايير تشغيل مؤسسية منضبطة.
+يجمع نهجنا بين دقة إدارة الضيافة وحوكمة الأصول العقارية لضمان تشغيل احترافي ومستدام لكل وحدة تحت إدارتنا.
+</p>
+<p>
+نركز على الانضباط التشغيلي، والتموضع الاستراتيجي، والحفاظ طويل الأجل على قيمة الأصل العقاري،
+مع مواءمة واضحة بين أهداف المالك وآليات التنفيذ.
+</p>
+</div>
+</section>
+
+<section class="section" id="about">
+<h2>عن زاميرا ستايز</h2>
+<p>
+زاميرا ستايز شركة متخصصة في إدارة أصول الضيافة، تهدف إلى تحويل الوحدات السكنية المفروشة إلى أصول تشغيلية منظمة ومهيكلة باحترافية.
+نعتمد نهجاً انتقائياً يركز على الجودة وليس على التوسع الكمي، مع اختيار العقارات التي تستوفي معايير جمالية وتشغيلية وموقعية محددة.
+</p>
+<p>
+يتكامل نموذج عملنا بين الإشراف التشغيلي، والتموضع السوقي، والصيانة الوقائية، والوعي التنظيمي.
+نؤمن أن الإدارة المنضبطة هي الأساس لتحقيق أداء مستدام.
+يتم تقييم كل عقار بشكل منفصل قبل اعتماده وفق إجراءات توثيق واضحة.
+</p>
+<p>
+بدلاً من السعي نحو التوسع السريع، نركز على تطوير محفظة عقارية متناسقة تعكس هوية واضحة ومستقرة.
+هذا النهج يحافظ على سلامة العلامة التجارية ويحمي مصالح الملاك على المدى الطويل.
+</p>
+<img src="about-interior.png" style="width:50%; margin-top:40px;">
+</section>
+
+<section class="section light-bg" id="services">
+<h2>الخدمات الأساسية</h2>
+<div class="grid">
+
+<div class="card">
+<img src="service-operations.png">
+<h3>الإشراف التشغيلي</h3>
+<p>
+يشمل إطار الإدارة التشغيلية لدينا تنسيق إجراءات الضيوف، ومعايير النظافة، ودورات التفتيش، وأنظمة التقارير.
+نطبق قوائم تحقق منظمة ومراجعات جودة لضمان الاتساق في جميع الوحدات.
+</p>
+<p>
+تساهم المتابعة الدورية في الحفاظ على مستوى العرض والانضباط التشغيلي بما يتوافق مع توقعات الملاك.
+</p>
+</div>
+
+<div class="card">
+<img src="service-branding.png">
+<h3>التموضع والعلامة</h3>
+<p>
+يخضع كل أصل عقاري لعملية تموضع استراتيجية تشمل التصوير الاحترافي، والانضباط السعري،
+وتوحيد الهوية البصرية عبر المنصات المختلفة.
+</p>
+<p>
+نتجنب الممارسات العشوائية في العرض، ونركز على تمثيل مدروس يعكس جودة الأصل العقاري.
+</p>
+</div>
+
+<div class="card">
+<img src="service-maintenance.png">
+<h3>حماية الأصل</h3>
+<p>
+الصيانة الوقائية عنصر أساسي في نموذج إدارتنا.
+نطبق عمليات تفتيش منتظمة ومتابعة للحالة العامة لتقليل مخاطر التدهور طويل الأجل.
+</p>
+<p>
+نولي أهمية للحفاظ على التشطيبات والمفروشات والبنية الداخلية بما يضمن استدامة الأداء المالي للعقار.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="portfolio">
+<h2>معايير المحفظة</h2>
+<p>
+يجب أن يستوفي كل عقار تحت إدارة زاميرا ستايز معايير محددة من حيث الجماليات والتأثيث والانضباط التشغيلي.
+التناسق والاتساق عنصران أساسيان في هوية محفظتنا.
+</p>
+<p>
+يتم تقييم الإضاءة، وجودة المواد، وتناغم التخطيط الداخلي قبل اعتماد أي وحدة ضمن المحفظة.
+</p>
+
+<div class="grid">
+<img src="portfolio-1.png" style="width: 100%;">
+<img src="portfolio-2.png" style="width: 100%;">
+<img src="portfolio-3.png" style="width: 100%;">
+</div>
+</section>
+
+<section class="section light-bg" id="cities">
+<h2>المدن التي نعمل بها</h2>
+<div class="grid">
+
+<div>
+<img src="cairo-skyline.png" style="width: 100%;">
+<h3>القاهرة</h3>
+<p>
+نركز في القاهرة على المناطق السكنية الراقية والمجمعات المنظمة والتوسعات العمرانية الحديثة التي تتماشى مع معايير السكن المؤسسي.
+</p>
+<p>
+يعكس وجودنا في العاصمة التزامنا بالتموضع الراقي والبنية التحتية الحديثة.
+</p>
+</div>
+
+<div>
+<img src="alexandria-seafront.png" style="width: 100%;">
+<h3>الإسكندرية</h3>
+<p>
+في الإسكندرية، ندير بشكل انتقائي عقارات مطلة على البحر أو ضمن مناطق مركزية ذات جودة معمارية واضحة.
+</p>
+<p>
+نركز على الإدارة المنضبطة والحفاظ طويل الأجل ضمن بيئة حضرية متوسطية راقية.
+</p>
+</div>
+
+
+exec
+/bin/bash -lc "sed -n '1,260p' index.html" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zamera Stays | Luxury Hospitality Asset Management Egypt</title>
+<meta name="description" content="Zamera Stays is a boutique luxury hospitality asset management company operating in Cairo and Alexandria, serving landlords and institutions.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+body { margin:0; font-family:'Inter',sans-serif; color:#111; background:#fff; line-height:1.7; }
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding: 18px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.logo { height: 42px; }
+
+nav { display:flex; align-items:center; }
+
+nav a {
+    text-decoration:none;
+    color:#111;
+    margin-left:20px;
+    font-weight:500;
+    font-size:14px;
+}
+
+.menu-toggle {
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+.hero {
+    height:95vh;
+    background:url('cairo-hero.png') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+    margin-top:80px;
+}
+
+.hero-content { max-width:700px; color:#fff; }
+
+.hero h1 {
+    font-family:'Playfair Display',serif;
+    font-size:56px;
+    margin-bottom:20px;
+}
+
+.section { padding:100px 8%; }
+
+.section h2 {
+    font-family:'Playfair Display',serif;
+    font-size:36px;
+    margin-bottom:25px;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.card img {
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.light-bg { background:#f5f5f5; }
+
+.dark {
+    background:#111;
+    color:#fff;
+}
+
+.dark a { color:#fff; }
+
+footer {
+    padding:60px 8%;
+    background:#000;
+    color:#fff;
+    font-size:14px;
+}
+
+@media (max-width: 992px) {
+
+    nav {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        padding: 40px 20px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.05);
+        transform: translateX(100%);
+        transition: 0.3s;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    nav a {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav id="navMenu">
+<img src="logo.jpg" alt="Zamera Stays Logo" class="logo">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#cities">Cities</a>
+<a href="#owners">For Owners</a>
+<a href="#governance">Governance</a>
+<a href="#contact">Contact</a>
+<a href="ar.html">العربية</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Luxury Hospitality Asset Management</h1>
+<p>
+Zamera Stays manages premium furnished residential assets in Cairo and Alexandria under disciplined institutional standards. 
+Our approach combines hospitality precision with real estate asset stewardship.
+</p>
+</div>
+</section>
+
+<section class="section" id="about">
+<h2>About Zamera Stays</h2>
+<p>
+Zamera Stays is a boutique hospitality asset management company established to elevate furnished residential properties 
+into professionally structured short term rental assets. We operate selectively, prioritizing quality over scale, 
+and focusing on properties that meet defined aesthetic, operational, and locational benchmarks.
+</p>
+<p>
+Our model integrates operational oversight, market positioning, preventive asset care, and regulatory awareness. 
+We believe disciplined management is the foundation of sustainable performance. 
+Each property is evaluated individually and onboarded through structured documentation and compliance procedures.
+</p>
+<p>
+Rather than pursuing volume driven growth, Zamera Stays emphasizes curated portfolio development. 
+This ensures consistency across all managed assets, protects brand integrity, and safeguards owner interests. 
+We operate with long term alignment in mind, building structured partnerships grounded in transparency and performance accountability.
+</p>
+<img src="about-interior.png" style="width:50%; margin-top:40px;">
+</section>
+
+<section class="section light-bg" id="services">
+<h2>Core Services</h2>
+<div class="grid">
+
+<div class="card">
+<img src="service-operations.png">
+<h3>Operational Oversight</h3>
+<p>
+Our operational management framework includes guest coordination protocols, housekeeping standards, 
+inspection cycles, and performance reporting systems. We implement structured checklists, quality control reviews, 
+and documented procedures to maintain consistency across all units.
+</p>
+<p>
+Regular monitoring ensures properties remain aligned with presentation standards, 
+operational discipline, and owner expectations. Structured reporting provides clarity and visibility.
+</p>
+</div>
+
+<div class="card">
+<img src="service-branding.png">
+<h3>Brand & Positioning</h3>
+<p>
+Each asset undergoes strategic positioning through professional photography, pricing discipline, 
+and controlled brand presentation. We ensure visual uniformity and premium perception across platforms.
+</p>
+<p>
+Our approach avoids casual listing practices. Instead, we maintain curated representation, 
+balanced occupancy strategies, and calibrated pricing aligned with asset quality.
+</p>
+</div>
+
+<div class="card">
+<img src="service-maintenance.png">
+<h3>Asset Protection</h3>
+<p>
+Preventive maintenance is embedded into our management model. Structured inspections, 
+condition monitoring, and coordinated service scheduling reduce long term deterioration risk.
+</p>
+<p>
+We prioritize preservation of finishes, furnishings, and structural integrity, 
+recognizing that asset longevity directly impacts financial performance.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="portfolio">
+<h2>Portfolio Standards</h2>
+<p>
+Every property managed by Zamera Stays must meet defined aesthetic, furnishing, and operational criteria. 
+Uniformity and consistency define our portfolio identity. We maintain curated interior standards 
+that reflect refined residential quality rather than transient accommodation.
+</p>
+<p>
+Lighting balance, material selection, layout coherence, and presentation discipline 
+are reviewed prior to onboarding. This ensures portfolio integrity and reinforces long term brand positioning.
+</p>
+
+<div class="grid">
+<img src="portfolio-1.png" style="width: 100%;">
+<img src="portfolio-2.png" style="width: 100%;">
+<img src="portfolio-3.png" style="width: 100%;">
+</div>
+</section>
+
+<section class="section light-bg" id="cities">
+<h2>Operating Cities</h2>
+<div class="grid">
+
+<div>
+<img src="cairo-skyline.png" style="width: 100%;">
+<h3>Cairo</h3>
+<p>
+In Cairo, Zamera Stays focuses on premium districts, structured residential compounds, 
+and new urban developments that align with institutional residential standards.
+</p>
+<p>
+Our presence in the capital reflects a commitment to refined positioning, 
+modern infrastructure, and strategically located assets.
+</p>
+</div>
+
+<div>
+<img src="alexandria-seafront.png" style="width: 100%;">
+<h3>Alexandria</h3>
+
+exec
+/bin/bash -lc 'rg -n "<style|<script|href=|section|nav|portfolio|service|contact|lang=|dir=" index.html ar.html' in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+ar.html:2:<html lang="ar" dir="rtl">
+ar.html:9:<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ar.html:10:<link rel="icon" type="image/png" href="favicon.png">
+ar.html:12:<style>
+ar.html:28:nav { display:flex; align-items:center; }
+ar.html:30:nav a {
+ar.html:60:.section { padding:100px 8%; }
+ar.html:62:.section h2 {
+ar.html:97:    nav {
+ar.html:111:    nav.active {
+ar.html:115:    nav a {
+ar.html:130:<nav id="navMenu">
+ar.html:132:<a href="#about">من نحن</a>
+ar.html:133:<a href="#services">الخدمات</a>
+ar.html:134:<a href="#portfolio">المعايير</a>
+ar.html:135:<a href="#cities">المدن</a>
+ar.html:136:<a href="#owners">للملاك</a>
+ar.html:137:<a href="#governance">الحوكمة</a>
+ar.html:138:<a href="#contact">تواصل</a>
+ar.html:139:<a href="index.html">English</a>
+ar.html:140:</nav>
+ar.html:143:<section class="hero">
+ar.html:155:</section>
+ar.html:157:<section class="section" id="about">
+ar.html:173:</section>
+ar.html:175:<section class="section light-bg" id="services">
+ar.html:180:<img src="service-operations.png">
+ar.html:192:<img src="service-branding.png">
+ar.html:204:<img src="service-maintenance.png">
+ar.html:216:</section>
+ar.html:218:<section class="section" id="portfolio">
+ar.html:229:<img src="portfolio-1.png" style="width: 100%;">
+ar.html:230:<img src="portfolio-2.png" style="width: 100%;">
+ar.html:231:<img src="portfolio-3.png" style="width: 100%;">
+ar.html:233:</section>
+ar.html:235:<section class="section light-bg" id="cities">
+ar.html:262:</section>
+ar.html:264:<section class="section dark" id="governance">
+ar.html:276:</section>
+ar.html:278:<section class="section" id="contact">
+ar.html:283:<p>البريد الإلكتروني: <a href="mailto:info@zamera-stays.com">info@zamera-stays.com</a></p>
+ar.html:285:<p>واتساب: <a href="https://wa.me/+201030400254">+20 10 30400254</a></p>
+ar.html:287:</section>
+ar.html:293:<script>
+ar.html:295:    document.getElementById("navMenu").classList.toggle("active");
+index.html:2:<html lang="en">
+index.html:9:<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+index.html:10:<link rel="icon" type="image/png" href="favicon.png">
+index.html:12:<style>
+index.html:28:nav { display:flex; align-items:center; }
+index.html:30:nav a {
+index.html:61:.section { padding:100px 8%; }
+index.html:63:.section h2 {
+index.html:99:    nav {
+index.html:113:    nav.active {
+index.html:117:    nav a {
+index.html:132:<nav id="navMenu">
+index.html:134:<a href="#about">About</a>
+index.html:135:<a href="#services">Services</a>
+index.html:136:<a href="#portfolio">Portfolio</a>
+index.html:137:<a href="#cities">Cities</a>
+index.html:138:<a href="#owners">For Owners</a>
+index.html:139:<a href="#governance">Governance</a>
+index.html:140:<a href="#contact">Contact</a>
+index.html:141:<a href="ar.html">العربية</a>
+index.html:142:</nav>
+index.html:145:<section class="hero">
+index.html:153:</section>
+index.html:155:<section class="section" id="about">
+index.html:168:Rather than pursuing volume driven growth, Zamera Stays emphasizes curated portfolio development. 
+index.html:173:</section>
+index.html:175:<section class="section light-bg" id="services">
+index.html:180:<img src="service-operations.png">
+index.html:194:<img src="service-branding.png">
+index.html:207:<img src="service-maintenance.png">
+index.html:211:condition monitoring, and coordinated service scheduling reduce long term deterioration risk.
+index.html:220:</section>
+index.html:222:<section class="section" id="portfolio">
+index.html:226:Uniformity and consistency define our portfolio identity. We maintain curated interior standards 
+index.html:231:are reviewed prior to onboarding. This ensures portfolio integrity and reinforces long term brand positioning.
+index.html:235:<img src="portfolio-1.png" style="width: 100%;">
+index.html:236:<img src="portfolio-2.png" style="width: 100%;">
+index.html:237:<img src="portfolio-3.png" style="width: 100%;">
+index.html:239:</section>
+index.html:241:<section class="section light-bg" id="cities">
+index.html:272:</section>
+index.html:274:<section class="section dark" id="governance">
+index.html:278:We maintain clear onboarding documentation, service records, inspection logs, and performance reviews.
+index.html:289:</section>
+index.html:291:<section class="section" id="contact">
+index.html:295:please contact us directly.
+index.html:297:<p>Email: <a href="mailto:info@zamera-stays.com">info@zamera-stays.com</a></p>
+index.html:298:<p>WhatsApp: <a href="https://wa.me/+201030400254">+20 10 30400254</a></p>
+index.html:300:</section>
+index.html:306:<script>
+index.html:308:    document.getElementById("navMenu").classList.toggle("active");
+
+2026-04-17T16:14:18.270639Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+codex
+I found a low-risk improvement area: the site has several desktop-sized inline images and galleries without responsive rules, so sections like `About` render awkwardly on mobile. I’m reading the rest of both pages and then I’ll patch the layout consistently in English and Arabic.
+exec
+/bin/bash -lc "sed -n '260,360p' index.html" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+<h3>Alexandria</h3>
+<p>
+In Alexandria, we selectively manage waterfront and central residential properties 
+that demonstrate architectural quality and stable demand fundamentals.
+</p>
+<p>
+Our approach emphasizes disciplined oversight and long term preservation 
+within refined Mediterranean urban environments.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section dark" id="governance">
+<h2>Governance & Compliance</h2>
+<p>
+Zamera Stays operates with structured documentation, procedural oversight, and disciplined reporting standards. 
+We maintain clear onboarding documentation, service records, inspection logs, and performance reviews.
+</p>
+<p>
+Our governance framework emphasizes transparency, regulatory awareness, 
+and operational accountability. Structured processes reduce operational ambiguity 
+and provide owners with measurable clarity.
+</p>
+<p>
+We believe responsible hospitality management requires defined systems, 
+documented controls, and continuous refinement of operational protocols.
+</p>
+</section>
+
+<section class="section" id="contact">
+<h2>Contact</h2>
+<p>
+For partnership discussions, institutional inquiries, or property onboarding considerations, 
+please contact us directly.
+</p>
+<p>Email: <a href="mailto:info@zamera-stays.com">info@zamera-stays.com</a></p>
+<p>WhatsApp: <a href="https://wa.me/+201030400254">+20 10 30400254</a></p>
+<p>Address: 6th Alshahid Mohammed Alshibani, Cairo, Egypt</p>
+</section>
+
+<footer>
+<p>© 2026 Zamera Stays. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+
+</html>
+
+exec
+/bin/bash -lc "sed -n '260,360p' ar.html" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+
+</div>
+</section>
+
+<section class="section dark" id="governance">
+<h2>الحوكمة والالتزام</h2>
+<p>
+تعمل زاميرا ستايز وفق إجراءات موثقة ومعايير تقارير منظمة.
+نحافظ على سجلات واضحة لعمليات التشغيل، والصيانة، والتقييم الدوري.
+</p>
+<p>
+يعتمد إطار الحوكمة لدينا على الشفافية، والوعي التنظيمي، والانضباط التشغيلي.
+</p>
+<p>
+نؤمن بأن إدارة الضيافة المسؤولة تتطلب أنظمة محددة وضوابط موثقة وتطويراً مستمراً للإجراءات.
+</p>
+</section>
+
+<section class="section" id="contact">
+<h2>تواصل معنا</h2>
+<p>
+للاستفسارات المتعلقة بالشراكات أو انضمام العقارات إلى محفظتنا، يرجى التواصل معنا مباشرة.
+</p>
+<p>البريد الإلكتروني: <a href="mailto:info@zamera-stays.com">info@zamera-stays.com</a></p>
+    
+<p>واتساب: <a href="https://wa.me/+201030400254">+20 10 30400254</a></p>
+<p>العنوان: 6 شارع الشهيد محمد الشيباني مصر الجديدة القاهرة, مصر</p>
+</section>
+
+<footer>
+<p>© 2026 زاميرا ستايز. جميع الحقوق محفوظة.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+
+</html>
+
+2026-04-17T16:14:28.219929Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+codex
+I’m editing both static pages now. The change is focused on mobile presentation: making the large content images and portfolio gallery responsive so they stop looking cramped or undersized on smaller screens.
+apply patch
+patch: completed
+/srv/worktrees/zamera-stays/57/ar.html
+/srv/worktrees/zamera-stays/57/index.html
+diff --git a/ar.html b/ar.html
+index 52912591903f758371ae2ca62605db5985bdd8ab..fa206c765756384df2e482c075ccfbb546a18c7b
+--- a/ar.html
++++ b/ar.html
+@@ -64,17 +64,34 @@
+     margin-bottom:25px;
+ }
+ 
+-.grid {
+-    display:grid;
+-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+-    gap:40px;
+-}
+-
+-.card img {
+-    width:100%;
+-    height:280px;
+-    object-fit:cover;
+-}
++.grid {
++    display:grid;
++    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
++    gap:40px;
++}
++
++.grid img {
++    width: 100%;
++    display: block;
++}
++
++.card img {
++    width:100%;
++    height:280px;
++    object-fit:cover;
++}
++
++.about-image {
++    width: min(100%, 720px);
++    display: block;
++    margin-top: 40px;
++}
++
++.portfolio-grid img,
++.city-card img {
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++}
+ 
+ .light-bg { background:#f5f5f5; }
+ 
+@@ -92,7 +109,7 @@
+     font-size:14px;
+ }
+ 
+-@media (max-width: 992px) {
++@media (max-width: 992px) {
+ 
+     nav {
+         position: fixed;
+@@ -116,11 +133,48 @@
+         margin: 15px 0;
+     }
+ 
+-    .menu-toggle {
+-        display: block;
+-    }
+-}
+-</style>
++    .menu-toggle {
++        display: block;
++    }
++
++    .hero h1 {
++        font-size: 42px;
++    }
++
++    .section {
++        padding: 80px 8%;
++    }
++}
++
++@media (max-width: 640px) {
++    .hero {
++        min-height: 78vh;
++        padding: 0 6%;
++    }
++
++    .hero h1 {
++        font-size: 32px;
++    }
++
++    .section {
++        padding: 72px 6%;
++    }
++
++    .section h2 {
++        font-size: 28px;
++    }
++
++    .grid {
++        gap: 24px;
++    }
++
++    .card img,
++    .portfolio-grid img,
++    .city-card img {
++        height: 220px;
++    }
++}
++</style>
+ </head>
+ 
+ <body>
+@@ -169,7 +223,7 @@
+ بدلاً من السعي نحو التوسع السريع، نركز على تطوير محفظة عقارية متناسقة تعكس هوية واضحة ومستقرة.
+ هذا النهج يحافظ على سلامة العلامة التجارية ويحمي مصالح الملاك على المدى الطويل.
+ </p>
+-<img src="about-interior.png" style="width:50%; margin-top:40px;">
++<img src="about-interior.png" alt="واجهة داخلية راقية ضمن محفظة زاميرا ستايز" class="about-image">
+ </section>
+ 
+ <section class="section light-bg" id="services">
+@@ -225,19 +279,19 @@
+ يتم تقييم الإضاءة، وجودة المواد، وتناغم التخطيط الداخلي قبل اعتماد أي وحدة ضمن المحفظة.
+ </p>
+ 
+-<div class="grid">
+-<img src="portfolio-1.png" style="width: 100%;">
+-<img src="portfolio-2.png" style="width: 100%;">
+-<img src="portfolio-3.png" style="width: 100%;">
+-</div>
+-</section>
++<div class="grid portfolio-grid">
++<img src="portfolio-1.png" alt="غرفة معيشة ضمن معايير محفظة زاميرا ستايز">
++<img src="portfolio-2.png" alt="غرفة نوم بتشطيبات راقية ضمن المحفظة">
++<img src="portfolio-3.png" alt="تفاصيل تصميم داخلي ضمن محفظة زاميرا ستايز">
++</div>
++</section>
+ 
+ <section class="section light-bg" id="cities">
+ <h2>المدن التي نعمل بها</h2>
+ <div class="grid">
+ 
+-<div>
+-<img src="cairo-skyline.png" style="width: 100%;">
++<div class="city-card">
++<img src="cairo-skyline.png" alt="أفق القاهرة">
+ <h3>القاهرة</h3>
+ <p>
+ نركز في القاهرة على المناطق السكنية الراقية والمجمعات المنظمة والتوسعات العمرانية الحديثة التي تتماشى مع معايير السكن المؤسسي.
+@@ -247,8 +301,8 @@
+ </p>
+ </div>
+ 
+-<div>
+-<img src="alexandria-seafront.png" style="width: 100%;">
++<div class="city-card">
++<img src="alexandria-seafront.png" alt="واجهة الإسكندرية البحرية">
+ <h3>الإسكندرية</h3>
+ <p>
+ في الإسكندرية، ندير بشكل انتقائي عقارات مطلة على البحر أو ضمن مناطق مركزية ذات جودة معمارية واضحة.
+diff --git a/index.html b/index.html
+index 2729dc7f43f75ddb760ee8dc4a7eca75fb4ea623..76301f0511b521a8f8013c47a871a7d196d10c66
+--- a/index.html
++++ b/index.html
+@@ -66,17 +66,34 @@
+     margin-bottom:25px;
+ }
+ 
+-.grid {
+-    display:grid;
+-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+-    gap:40px;
+-}
+-
+-.card img {
+-    width:100%;
+-    height:280px;
+-    object-fit:cover;
+-}
++.grid {
++    display:grid;
++    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
++    gap:40px;
++}
++
++.grid img {
++    width: 100%;
++    display: block;
++}
++
++.card img {
++    width:100%;
++    height:280px;
++    object-fit:cover;
++}
++
++.about-image {
++    width: min(100%, 720px);
++    display: block;
++    margin-top: 40px;
++}
++
++.portfolio-grid img,
++.city-card img {
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++}
+ 
+ .light-bg { background:#f5f5f5; }
+ 
+@@ -94,7 +111,7 @@
+     font-size:14px;
+ }
+ 
+-@media (max-width: 992px) {
++@media (max-width: 992px) {
+ 
+     nav {
+         position: fixed;
+@@ -118,11 +135,48 @@
+         margin: 15px 0;
+     }
+ 
+-    .menu-toggle {
+-        display: block;
+-    }
+-}
+-</style>
++    .menu-toggle {
++        display: block;
++    }
++
++    .hero h1 {
++        font-size: 44px;
++    }
++
++    .section {
++        padding: 80px 8%;
++    }
++}
++
++@media (max-width: 640px) {
++    .hero {
++        min-height: 78vh;
++        padding: 0 6%;
++    }
++
++    .hero h1 {
++        font-size: 34px;
++    }
++
++    .section {
++        padding: 72px 6%;
++    }
++
++    .section h2 {
++        font-size: 30px;
++    }
++
++    .grid {
++        gap: 24px;
++    }
++
++    .card img,
++    .portfolio-grid img,
++    .city-card img {
++        height: 220px;
++    }
++}
++</style>
+ </head>
+ 
+ <body>
+@@ -169,7 +223,7 @@
+ This ensures consistency across all managed assets, protects brand integrity, and safeguards owner interests. 
+ We operate with long term alignment in mind, building structured partnerships grounded in transparency and performance accountability.
+ </p>
+-<img src="about-interior.png" style="width:50%; margin-top:40px;">
++<img src="about-interior.png" alt="Refined Zamera Stays interior" class="about-image">
+ </section>
+ 
+ <section class="section light-bg" id="services">
+@@ -231,19 +285,19 @@
+ are reviewed prior to onboarding. This ensures portfolio integrity and reinforces long term brand positioning.
+ </p>
+ 
+-<div class="grid">
+-<img src="portfolio-1.png" style="width: 100%;">
+-<img src="portfolio-2.png" style="width: 100%;">
+-<img src="portfolio-3.png" style="width: 100%;">
+-</div>
+-</section>
++<div class="grid portfolio-grid">
++<img src="portfolio-1.png" alt="Zamera Stays portfolio apartment living area">
++<img src="portfolio-2.png" alt="Zamera Stays portfolio bedroom with premium finishes">
++<img src="portfolio-3.png" alt="Zamera Stays portfolio interior design details">
++</div>
++</section>
+ 
+ <section class="section light-bg" id="cities">
+ <h2>Operating Cities</h2>
+ <div class="grid">
+ 
+-<div>
+-<img src="cairo-skyline.png" style="width: 100%;">
++<div class="city-card">
++<img src="cairo-skyline.png" alt="Cairo skyline">
+ <h3>Cairo</h3>
+ <p>
+ In Cairo, Zamera Stays focuses on premium districts, structured residential compounds, 
+@@ -255,8 +309,8 @@
+ </p>
+ </div>
+ 
+-<div>
+-<img src="alexandria-seafront.png" style="width: 100%;">
++<div class="city-card">
++<img src="alexandria-seafront.png" alt="Alexandria seafront">
+ <h3>Alexandria</h3>
+ <p>
+ In Alexandria, we selectively manage waterfront and central residential properties 
+
+diff --git a/ar.html b/ar.html
+index 52912591903f758371ae2ca62605db5985bdd8ab..fa206c765756384df2e482c075ccfbb546a18c7b
+--- a/ar.html
++++ b/ar.html
+@@ -64,17 +64,34 @@
+     margin-bottom:25px;
+ }
+ 
+-.grid {
+-    display:grid;
+-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+-    gap:40px;
+-}
+-
+-.card img {
+-    width:100%;
+-    height:280px;
+-    object-fit:cover;
+-}
++.grid {
++    display:grid;
++    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
++    gap:40px;
++}
++
++.grid img {
++    width: 100%;
++    display: block;
++}
++
++.card img {
++    width:100%;
++    height:280px;
++    object-fit:cover;
++}
++
++.about-image {
++    width: min(100%, 720px);
++    display: block;
++    margin-top: 40px;
++}
++
++.portfolio-grid img,
++.city-card img {
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++}
+ 
+ .light-bg { background:#f5f5f5; }
+ 
+@@ -92,7 +109,7 @@
+     font-size:14px;
+ }
+ 
+-@media (max-width: 992px) {
++@media (max-width: 992px) {
+ 
+     nav {
+         position: fixed;
+@@ -116,11 +133,48 @@
+         margin: 15px 0;
+     }
+ 
+-    .menu-toggle {
+-        display: block;
+-    }
+-}
+-</style>
++    .menu-toggle {
++        display: block;
++    }
++
++    .hero h1 {
++        font-size: 42px;
++    }
++
++    .section {
++        padding: 80px 8%;
++    }
++}
++
++@media (max-width: 640px) {
++    .hero {
++        min-height: 78vh;
++        padding: 0 6%;
++    }
++
++    .hero h1 {
++        font-size: 32px;
++    }
++
++    .section {
++        padding: 72px 6%;
++    }
++
++    .section h2 {
++        font-size: 28px;
++    }
++
++    .grid {
++        gap: 24px;
++    }
++
++    .card img,
++    .portfolio-grid img,
++    .city-card img {
++        height: 220px;
++    }
++}
++</style>
+ </head>
+ 
+ <body>
+@@ -169,7 +223,7 @@
+ بدلاً من السعي نحو التوسع السريع، نركز على تطوير محفظة عقارية متناسقة تعكس هوية واضحة ومستقرة.
+ هذا النهج يحافظ على سلامة العلامة التجارية ويحمي مصالح الملاك على المدى الطويل.
+ </p>
+-<img src="about-interior.png" style="width:50%; margin-top:40px;">
++<img src="about-interior.png" alt="واجهة داخلية راقية ضمن محفظة زاميرا ستايز" class="about-image">
+ </section>
+ 
+ <section class="section light-bg" id="services">
+@@ -225,19 +279,19 @@
+ يتم تقييم الإضاءة، وجودة المواد، وتناغم التخطيط الداخلي قبل اعتماد أي وحدة ضمن المحفظة.
+ </p>
+ 
+-<div class="grid">
+-<img src="portfolio-1.png" style="width: 100%;">
+-<img src="portfolio-2.png" style="width: 100%;">
+-<img src="portfolio-3.png" style="width: 100%;">
+-</div>
+-</section>
++<div class="grid portfolio-grid">
++<img src="portfolio-1.png" alt="غرفة معيشة ضمن معايير محفظة زاميرا ستايز">
++<img src="portfolio-2.png" alt="غرفة نوم بتشطيبات راقية ضمن المحفظة">
++<img src="portfolio-3.png" alt="تفاصيل تصميم داخلي ضمن محفظة زاميرا ستايز">
++</div>
++</section>
+ 
+ <section class="section light-bg" id="cities">
+ <h2>المدن التي نعمل بها</h2>
+ <div class="grid">
+ 
+-<div>
+-<img src="cairo-skyline.png" style="width: 100%;">
++<div class="city-card">
++<img src="cairo-skyline.png" alt="أفق القاهرة">
+ <h3>القاهرة</h3>
+ <p>
+ نركز في القاهرة على المناطق السكنية الراقية والمجمعات المنظمة والتوسعات العمرانية الحديثة التي تتماشى مع معايير السكن المؤسسي.
+@@ -247,8 +301,8 @@
+ </p>
+ </div>
+ 
+-<div>
+-<img src="alexandria-seafront.png" style="width: 100%;">
++<div class="city-card">
++<img src="alexandria-seafront.png" alt="واجهة الإسكندرية البحرية">
+ <h3>الإسكندرية</h3>
+ <p>
+ في الإسكندرية، ندير بشكل انتقائي عقارات مطلة على البحر أو ضمن مناطق مركزية ذات جودة معمارية واضحة.
+diff --git a/index.html b/index.html
+index 2729dc7f43f75ddb760ee8dc4a7eca75fb4ea623..76301f0511b521a8f8013c47a871a7d196d10c66
+--- a/index.html
++++ b/index.html
+@@ -66,17 +66,34 @@
+     margin-bottom:25px;
+ }
+ 
+-.grid {
+-    display:grid;
+-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+-    gap:40px;
+-}
+-
+-.card img {
+-    width:100%;
+-    height:280px;
+-    object-fit:cover;
+-}
++.grid {
++    display:grid;
++    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
++    gap:40px;
++}
++
++.grid img {
++    width: 100%;
++    display: block;
++}
++
++.card img {
++    width:100%;
++    height:280px;
++    object-fit:cover;
++}
++
++.about-image {
++    width: min(100%, 720px);
++    display: block;
++    margin-top: 40px;
++}
++
++.portfolio-grid img,
++.city-card img {
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++}
+ 
+ .light-bg { background:#f5f5f5; }
+ 
+@@ -94,7 +111,7 @@
+     font-size:14px;
+ }
+ 
+-@media (max-width: 992px) {
++@media (max-width: 992px) {
+ 
+     nav {
+         position: fixed;
+@@ -118,11 +135,48 @@
+         margin: 15px 0;
+     }
+ 
+-    .menu-toggle {
+-        display: block;
+-    }
+-}
+-</style>
++    .menu-toggle {
++        display: block;
++    }
++
++    .hero h1 {
++        font-size: 44px;
++    }
++
++    .section {
++        padding: 80px 8%;
++    }
++}
++
++@media (max-width: 640px) {
++    .hero {
++        min-height: 78vh;
++        padding: 0 6%;
++    }
++
++    .hero h1 {
++        font-size: 34px;
++    }
++
++    .section {
++        padding: 72px 6%;
++    }
++
++    .section h2 {
++        font-size: 30px;
++    }
++
++    .grid {
++        gap: 24px;
++    }
++
++    .card img,
++    .portfolio-grid img,
++    .city-card img {
++        height: 220px;
++    }
++}
++</style>
+ </head>
+ 
+ <body>
+@@ -169,7 +223,7 @@
+ This ensures consistency across all managed assets, protects brand integrity, and safeguards owner interests. 
+ We operate with long term alignment in mind, building structured partnerships grounded in transparency and performance accountability.
+ </p>
+-<img src="about-interior.png" style="width:50%; margin-top:40px;">
++<img src="about-interior.png" alt="Refined Zamera Stays interior" class="about-image">
+ </section>
+ 
+ <section class="section light-bg" id="services">
+@@ -231,19 +285,19 @@
+ are reviewed prior to onboarding. This ensures portfolio integrity and reinforces long term brand positioning.
+ </p>
+ 
+-<div class="grid">
+-<img src="portfolio-1.png" style="width: 100%;">
+-<img src="portfolio-2.png" style="width: 100%;">
+-<img src="portfolio-3.png" style="width: 100%;">
+-</div>
+-</section>
++<div class="grid portfolio-grid">
++<img src="portfolio-1.png" alt="Zamera Stays portfolio apartment living area">
++<img src="portfolio-2.png" alt="Zamera Stays portfolio bedroom with premium finishes">
++<img src="portfolio-3.png" alt="Zamera Stays portfolio interior design details">
++</div>
++</section>
+ 
+ <section class="section light-bg" id="cities">
+ <h2>Operating Cities</h2>
+ <div class="grid">
+ 
+-<div>
+-<img src="cairo-skyline.png" style="width: 100%;">
++<div class="city-card">
++<img src="cairo-skyline.png" alt="Cairo skyline">
+ <h3>Cairo</h3>
+ <p>
+ In Cairo, Zamera Stays focuses on premium districts, structured residential compounds, 
+@@ -255,8 +309,8 @@
+ </p>
+ </div>
+ 
+-<div>
+-<img src="alexandria-seafront.png" style="width: 100%;">
++<div class="city-card">
++<img src="alexandria-seafront.png" alt="Alexandria seafront">
+ <h3>Alexandria</h3>
+ <p>
+ In Alexandria, we selectively manage waterfront and central residential properties 
+
+2026-04-17T16:14:58.470562Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+codex
+The patch is in. I’m doing a quick verification pass on the edited markup and styles to catch any obvious breakage before I close this out.
+exec
+/bin/bash -lc 'git diff -- index.html ar.html' in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+diff --git a/ar.html b/ar.html
+index 5291259..fa206c7 100644
+--- a/ar.html
++++ b/ar.html
+@@ -64,17 +64,34 @@ nav a {
+     margin-bottom:25px;
+ }
+ 
+-.grid {
+-    display:grid;
+-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+-    gap:40px;
+-}
+-
+-.card img {
+-    width:100%;
+-    height:280px;
+-    object-fit:cover;
+-}
++.grid {
++    display:grid;
++    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
++    gap:40px;
++}
++
++.grid img {
++    width: 100%;
++    display: block;
++}
++
++.card img {
++    width:100%;
++    height:280px;
++    object-fit:cover;
++}
++
++.about-image {
++    width: min(100%, 720px);
++    display: block;
++    margin-top: 40px;
++}
++
++.portfolio-grid img,
++.city-card img {
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++}
+ 
+ .light-bg { background:#f5f5f5; }
+ 
+@@ -92,7 +109,7 @@ footer {
+     font-size:14px;
+ }
+ 
+-@media (max-width: 992px) {
++@media (max-width: 992px) {
+ 
+     nav {
+         position: fixed;
+@@ -116,11 +133,48 @@ footer {
+         margin: 15px 0;
+     }
+ 
+-    .menu-toggle {
+-        display: block;
+-    }
+-}
+-</style>
++    .menu-toggle {
++        display: block;
++    }
++
++    .hero h1 {
++        font-size: 42px;
++    }
++
++    .section {
++        padding: 80px 8%;
++    }
++}
++
++@media (max-width: 640px) {
++    .hero {
++        min-height: 78vh;
++        padding: 0 6%;
++    }
++
++    .hero h1 {
++        font-size: 32px;
++    }
++
++    .section {
++        padding: 72px 6%;
++    }
++
++    .section h2 {
++        font-size: 28px;
++    }
++
++    .grid {
++        gap: 24px;
++    }
++
++    .card img,
++    .portfolio-grid img,
++    .city-card img {
++        height: 220px;
++    }
++}
++</style>
+ </head>
+ 
+ <body>
+@@ -169,7 +223,7 @@ footer {
+ بدلاً من السعي نحو التوسع السريع، نركز على تطوير محفظة عقارية متناسقة تعكس هوية واضحة ومستقرة.
+ هذا النهج يحافظ على سلامة العلامة التجارية ويحمي مصالح الملاك على المدى الطويل.
+ </p>
+-<img src="about-interior.png" style="width:50%; margin-top:40px;">
++<img src="about-interior.png" alt="واجهة داخلية راقية ضمن محفظة زاميرا ستايز" class="about-image">
+ </section>
+ 
+ <section class="section light-bg" id="services">
+@@ -225,19 +279,19 @@ footer {
+ يتم تقييم الإضاءة، وجودة المواد، وتناغم التخطيط الداخلي قبل اعتماد أي وحدة ضمن المحفظة.
+ </p>
+ 
+-<div class="grid">
+-<img src="portfolio-1.png" style="width: 100%;">
+-<img src="portfolio-2.png" style="width: 100%;">
+-<img src="portfolio-3.png" style="width: 100%;">
+-</div>
+-</section>
++<div class="grid portfolio-grid">
++<img src="portfolio-1.png" alt="غرفة معيشة ضمن معايير محفظة زاميرا ستايز">
++<img src="portfolio-2.png" alt="غرفة نوم بتشطيبات راقية ضمن المحفظة">
++<img src="portfolio-3.png" alt="تفاصيل تصميم داخلي ضمن محفظة زاميرا ستايز">
++</div>
++</section>
+ 
+ <section class="section light-bg" id="cities">
+ <h2>المدن التي نعمل بها</h2>
+ <div class="grid">
+ 
+-<div>
+-<img src="cairo-skyline.png" style="width: 100%;">
++<div class="city-card">
++<img src="cairo-skyline.png" alt="أفق القاهرة">
+ <h3>القاهرة</h3>
+ <p>
+ نركز في القاهرة على المناطق السكنية الراقية والمجمعات المنظمة والتوسعات العمرانية الحديثة التي تتماشى مع معايير السكن المؤسسي.
+@@ -247,8 +301,8 @@ footer {
+ </p>
+ </div>
+ 
+-<div>
+-<img src="alexandria-seafront.png" style="width: 100%;">
++<div class="city-card">
++<img src="alexandria-seafront.png" alt="واجهة الإسكندرية البحرية">
+ <h3>الإسكندرية</h3>
+ <p>
+ في الإسكندرية، ندير بشكل انتقائي عقارات مطلة على البحر أو ضمن مناطق مركزية ذات جودة معمارية واضحة.
+diff --git a/index.html b/index.html
+index 2729dc7..76301f0 100644
+--- a/index.html
++++ b/index.html
+@@ -66,17 +66,34 @@ nav a {
+     margin-bottom:25px;
+ }
+ 
+-.grid {
+-    display:grid;
+-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+-    gap:40px;
+-}
+-
+-.card img {
+-    width:100%;
+-    height:280px;
+-    object-fit:cover;
+-}
++.grid {
++    display:grid;
++    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
++    gap:40px;
++}
++
++.grid img {
++    width: 100%;
++    display: block;
++}
++
++.card img {
++    width:100%;
++    height:280px;
++    object-fit:cover;
++}
++
++.about-image {
++    width: min(100%, 720px);
++    display: block;
++    margin-top: 40px;
++}
++
++.portfolio-grid img,
++.city-card img {
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++}
+ 
+ .light-bg { background:#f5f5f5; }
+ 
+@@ -94,7 +111,7 @@ footer {
+     font-size:14px;
+ }
+ 
+-@media (max-width: 992px) {
++@media (max-width: 992px) {
+ 
+     nav {
+         position: fixed;
+@@ -118,11 +135,48 @@ footer {
+         margin: 15px 0;
+     }
+ 
+-    .menu-toggle {
+-        display: block;
+-    }
+-}
+-</style>
++    .menu-toggle {
++        display: block;
++    }
++
++    .hero h1 {
++        font-size: 44px;
++    }
++
++    .section {
++        padding: 80px 8%;
++    }
++}
++
++@media (max-width: 640px) {
++    .hero {
++        min-height: 78vh;
++        padding: 0 6%;
++    }
++
++    .hero h1 {
++        font-size: 34px;
++    }
++
++    .section {
++        padding: 72px 6%;
++    }
++
++    .section h2 {
++        font-size: 30px;
++    }
++
++    .grid {
++        gap: 24px;
++    }
++
++    .card img,
++    .portfolio-grid img,
++    .city-card img {
++        height: 220px;
++    }
++}
++</style>
+ </head>
+ 
+ <body>
+@@ -169,7 +223,7 @@ Rather than pursuing volume driven growth, Zamera Stays emphasizes curated portf
+ This ensures consistency across all managed assets, protects brand integrity, and safeguards owner interests. 
+ We operate with long term alignment in mind, building structured partnerships grounded in transparency and performance accountability.
+ </p>
+-<img src="about-interior.png" style="width:50%; margin-top:40px;">
++<img src="about-interior.png" alt="Refined Zamera Stays interior" class="about-image">
+ </section>
+ 
+ <section class="section light-bg" id="services">
+@@ -231,19 +285,19 @@ Lighting balance, material selection, layout coherence, and presentation discipl
+ are reviewed prior to onboarding. This ensures portfolio integrity and reinforces long term brand positioning.
+ </p>
+ 
+-<div class="grid">
+-<img src="portfolio-1.png" style="width: 100%;">
+-<img src="portfolio-2.png" style="width: 100%;">
+-<img src="portfolio-3.png" style="width: 100%;">
+-</div>
+-</section>
++<div class="grid portfolio-grid">
++<img src="portfolio-1.png" alt="Zamera Stays portfolio apartment living area">
++<img src="portfolio-2.png" alt="Zamera Stays portfolio bedroom with premium finishes">
++<img src="portfolio-3.png" alt="Zamera Stays portfolio interior design details">
++</div>
++</section>
+ 
+ <section class="section light-bg" id="cities">
+ <h2>Operating Cities</h2>
+ <div class="grid">
+ 
+-<div>
+-<img src="cairo-skyline.png" style="width: 100%;">
++<div class="city-card">
++<img src="cairo-skyline.png" alt="Cairo skyline">
+ <h3>Cairo</h3>
+ <p>
+ In Cairo, Zamera Stays focuses on premium districts, structured residential compounds, 
+@@ -255,8 +309,8 @@ modern infrastructure, and strategically located assets.
+ </p>
+ </div>
+ 
+-<div>
+-<img src="alexandria-seafront.png" style="width: 100%;">
++<div class="city-card">
++<img src="alexandria-seafront.png" alt="Alexandria seafront">
+ <h3>Alexandria</h3>
+ <p>
+ In Alexandria, we selectively manage waterfront and central residential properties 
+
+exec
+/bin/bash -lc 'xmllint --html --noout index.html ar.html' in /srv/worktrees/zamera-stays/57
+ exited 127 in 0ms:
+/bin/bash: line 1: xmllint: command not found
+
+exec
+/bin/bash -lc "rg -n \"about-image|portfolio-grid|city-card|@media \\(max-width: 640px\\)|alt=\" index.html ar.html" in /srv/worktrees/zamera-stays/57
+ succeeded in 0ms:
+ar.html:84:.about-image {
+ar.html:90:.portfolio-grid img,
+ar.html:91:.city-card img {
+ar.html:149:@media (max-width: 640px) {
+ar.html:172:    .portfolio-grid img,
+ar.html:173:    .city-card img {
+ar.html:185:<img src="logo.jpg" alt="Zamera Stays Logo" class="logo">
+ar.html:226:<img src="about-interior.png" alt="واجهة داخلية راقية ضمن محفظة زاميرا ستايز" class="about-image">
+ar.html:282:<div class="grid portfolio-grid">
+ar.html:283:<img src="portfolio-1.png" alt="غرفة معيشة ضمن معايير محفظة زاميرا ستايز">
+ar.html:284:<img src="portfolio-2.png" alt="غرفة نوم بتشطيبات راقية ضمن المحفظة">
+ar.html:285:<img src="portfolio-3.png" alt="تفاصيل تصميم داخلي ضمن محفظة زاميرا ستايز">
+ar.html:293:<div class="city-card">
+ar.html:294:<img src="cairo-skyline.png" alt="أفق القاهرة">
+ar.html:304:<div class="city-card">
+ar.html:305:<img src="alexandria-seafront.png" alt="واجهة الإسكندرية البحرية">
+index.html:86:.about-image {
+index.html:92:.portfolio-grid img,
+index.html:93:.city-card img {
+index.html:151:@media (max-width: 640px) {
+index.html:174:    .portfolio-grid img,
+index.html:175:    .city-card img {
+index.html:187:<img src="logo.jpg" alt="Zamera Stays Logo" class="logo">
+index.html:226:<img src="about-interior.png" alt="Refined Zamera Stays interior" class="about-image">
+index.html:288:<div class="grid portfolio-grid">
+index.html:289:<img src="portfolio-1.png" alt="Zamera Stays portfolio apartment living area">
+index.html:290:<img src="portfolio-2.png" alt="Zamera Stays portfolio bedroom with premium finishes">
+index.html:291:<img src="portfolio-3.png" alt="Zamera Stays portfolio interior design details">
+index.html:299:<div class="city-card">
+index.html:300:<img src="cairo-skyline.png" alt="Cairo skyline">
+index.html:312:<div class="city-card">
+index.html:313:<img src="alexandria-seafront.png" alt="Alexandria seafront">
+
+diff --git a/ar.html b/ar.html
+index 52912591903f758371ae2ca62605db5985bdd8ab..fa206c765756384df2e482c075ccfbb546a18c7b
+--- a/ar.html
++++ b/ar.html
+@@ -64,17 +64,34 @@
+     margin-bottom:25px;
+ }
+ 
+-.grid {
+-    display:grid;
+-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+-    gap:40px;
+-}
+-
+-.card img {
+-    width:100%;
+-    height:280px;
+-    object-fit:cover;
+-}
++.grid {
++    display:grid;
++    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
++    gap:40px;
++}
++
++.grid img {
++    width: 100%;
++    display: block;
++}
++
++.card img {
++    width:100%;
++    height:280px;
++    object-fit:cover;
++}
++
++.about-image {
++    width: min(100%, 720px);
++    display: block;
++    margin-top: 40px;
++}
++
++.portfolio-grid img,
++.city-card img {
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++}
+ 
+ .light-bg { background:#f5f5f5; }
+ 
+@@ -92,7 +109,7 @@
+     font-size:14px;
+ }
+ 
+-@media (max-width: 992px) {
++@media (max-width: 992px) {
+ 
+     nav {
+         position: fixed;
+@@ -116,11 +133,48 @@
+         margin: 15px 0;
+     }
+ 
+-    .menu-toggle {
+-        display: block;
+-    }
+-}
+-</style>
++    .menu-toggle {
++        display: block;
++    }
++
++    .hero h1 {
++        font-size: 42px;
++    }
++
++    .section {
++        padding: 80px 8%;
++    }
++}
++
++@media (max-width: 640px) {
++    .hero {
++        min-height: 78vh;
++        padding: 0 6%;
++    }
++
++    .hero h1 {
++        font-size: 32px;
++    }
++
++    .section {
++        padding: 72px 6%;
++    }
++
++    .section h2 {
++        font-size: 28px;
++    }
++
++    .grid {
++        gap: 24px;
++    }
++
++    .card img,
++    .portfolio-grid img,
++    .city-card img {
++        height: 220px;
++    }
++}
++</style>
+ </head>
+ 
+ <body>
+@@ -169,7 +223,7 @@
+ بدلاً من السعي نحو التوسع السريع، نركز على تطوير محفظة عقارية متناسقة تعكس هوية واضحة ومستقرة.
+ هذا النهج يحافظ على سلامة العلامة التجارية ويحمي مصالح الملاك على المدى الطويل.
+ </p>
+-<img src="about-interior.png" style="width:50%; margin-top:40px;">
++<img src="about-interior.png" alt="واجهة داخلية راقية ضمن محفظة زاميرا ستايز" class="about-image">
+ </section>
+ 
+ <section class="section light-bg" id="services">
+@@ -225,19 +279,19 @@
+ يتم تقييم الإضاءة، وجودة المواد، وتناغم التخطيط الداخلي قبل اعتماد أي وحدة ضمن المحفظة.
+ </p>
+ 
+-<div class="grid">
+-<img src="portfolio-1.png" style="width: 100%;">
+-<img src="portfolio-2.png" style="width: 100%;">
+-<img src="portfolio-3.png" style="width: 100%;">
+-</div>
+-</section>
++<div class="grid portfolio-grid">
++<img src="portfolio-1.png" alt="غرفة معيشة ضمن معايير محفظة زاميرا ستايز">
++<img src="portfolio-2.png" alt="غرفة نوم بتشطيبات راقية ضمن المحفظة">
++<img src="portfolio-3.png" alt="تفاصيل تصميم داخلي ضمن محفظة زاميرا ستايز">
++</div>
++</section>
+ 
+ <section class="section light-bg" id="cities">
+ <h2>المدن التي نعمل بها</h2>
+ <div class="grid">
+ 
+-<div>
+-<img src="cairo-skyline.png" style="width: 100%;">
++<div class="city-card">
++<img src="cairo-skyline.png" alt="أفق القاهرة">
+ <h3>القاهرة</h3>
+ <p>
+ نركز في القاهرة على المناطق السكنية الراقية والمجمعات المنظمة والتوسعات العمرانية الحديثة التي تتماشى مع معايير السكن المؤسسي.
+@@ -247,8 +301,8 @@
+ </p>
+ </div>
+ 
+-<div>
+-<img src="alexandria-seafront.png" style="width: 100%;">
++<div class="city-card">
++<img src="alexandria-seafront.png" alt="واجهة الإسكندرية البحرية">
+ <h3>الإسكندرية</h3>
+ <p>
+ في الإسكندرية، ندير بشكل انتقائي عقارات مطلة على البحر أو ضمن مناطق مركزية ذات جودة معمارية واضحة.
+diff --git a/index.html b/index.html
+index 2729dc7f43f75ddb760ee8dc4a7eca75fb4ea623..76301f0511b521a8f8013c47a871a7d196d10c66
+--- a/index.html
++++ b/index.html
+@@ -66,17 +66,34 @@
+     margin-bottom:25px;
+ }
+ 
+-.grid {
+-    display:grid;
+-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+-    gap:40px;
+-}
+-
+-.card img {
+-    width:100%;
+-    height:280px;
+-    object-fit:cover;
+-}
++.grid {
++    display:grid;
++    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
++    gap:40px;
++}
++
++.grid img {
++    width: 100%;
++    display: block;
++}
++
++.card img {
++    width:100%;
++    height:280px;
++    object-fit:cover;
++}
++
++.about-image {
++    width: min(100%, 720px);
++    display: block;
++    margin-top: 40px;
++}
++
++.portfolio-grid img,
++.city-card img {
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++}
+ 
+ .light-bg { background:#f5f5f5; }
+ 
+@@ -94,7 +111,7 @@
+     font-size:14px;
+ }
+ 
+-@media (max-width: 992px) {
++@media (max-width: 992px) {
+ 
+     nav {
+         position: fixed;
+@@ -118,11 +135,48 @@
+         margin: 15px 0;
+     }
+ 
+-    .menu-toggle {
+-        display: block;
+-    }
+-}
+-</style>
++    .menu-toggle {
++        display: block;
++    }
++
++    .hero h1 {
++        font-size: 44px;
++    }
++
++    .section {
++        padding: 80px 8%;
++    }
++}
++
++@media (max-width: 640px) {
++    .hero {
++        min-height: 78vh;
++        padding: 0 6%;
++    }
++
++    .hero h1 {
++        font-size: 34px;
++    }
++
++    .section {
++        padding: 72px 6%;
++    }
++
++    .section h2 {
++        font-size: 30px;
++    }
++
++    .grid {
++        gap: 24px;
++    }
++
++    .card img,
++    .portfolio-grid img,
++    .city-card img {
++        height: 220px;
++    }
++}
++</style>
+ </head>
+ 
+ <body>
+@@ -169,7 +223,7 @@
+ This ensures consistency across all managed assets, protects brand integrity, and safeguards owner interests. 
+ We operate with long term alignment in mind, building structured partnerships grounded in transparency and performance accountability.
+ </p>
+-<img src="about-interior.png" style="width:50%; margin-top:40px;">
++<img src="about-interior.png" alt="Refined Zamera Stays interior" class="about-image">
+ </section>
+ 
+ <section class="section light-bg" id="services">
+@@ -231,19 +285,19 @@
+ are reviewed prior to onboarding. This ensures portfolio integrity and reinforces long term brand positioning.
+ </p>
+ 
+-<div class="grid">
+-<img src="portfolio-1.png" style="width: 100%;">
+-<img src="portfolio-2.png" style="width: 100%;">
+-<img src="portfolio-3.png" style="width: 100%;">
+-</div>
+-</section>
++<div class="grid portfolio-grid">
++<img src="portfolio-1.png" alt="Zamera Stays portfolio apartment living area">
++<img src="portfolio-2.png" alt="Zamera Stays portfolio bedroom with premium finishes">
++<img src="portfolio-3.png" alt="Zamera Stays portfolio interior design details">
++</div>
++</section>
+ 
+ <section class="section light-bg" id="cities">
+ <h2>Operating Cities</h2>
+ <div class="grid">
+ 
+-<div>
+-<img src="cairo-skyline.png" style="width: 100%;">
++<div class="city-card">
++<img src="cairo-skyline.png" alt="Cairo skyline">
+ <h3>Cairo</h3>
+ <p>
+ In Cairo, Zamera Stays focuses on premium districts, structured residential compounds, 
+@@ -255,8 +309,8 @@
+ </p>
+ </div>
+ 
+-<div>
+-<img src="alexandria-seafront.png" style="width: 100%;">
++<div class="city-card">
++<img src="alexandria-seafront.png" alt="Alexandria seafront">
+ <h3>Alexandria</h3>
+ <p>
+ In Alexandria, we selectively manage waterfront and central residential properties 
+
+2026-04-17T16:15:08.353336Z ERROR codex_models_manager::manager: failed to refresh available models: timeout waiting for child process to exit
+codex
+I improved the site’s mobile presentation by fixing how the large content images scale on small screens in both [index.html](/srv/worktrees/zamera-stays/57/index.html) and [ar.html](/srv/worktrees/zamera-stays/57/ar.html). The `About` image is now properly responsive instead of being locked to `50%`, the portfolio and city images now use consistent aspect ratios, and spacing/type sizes tighten up below tablet and phone breakpoints so those sections read more cleanly on mobile.
+
+I also added `alt` text to the main content images while touching the markup, which improves accessibility at essentially no risk.
+
+Verification: I checked the rendered diff and confirmed the new selectors and updated image markup are present. `xmllint` was not installed in this environment, so I could not run that HTML validation command.
+diff --git a/ar.html b/ar.html
+index 52912591903f758371ae2ca62605db5985bdd8ab..fa206c765756384df2e482c075ccfbb546a18c7b
+--- a/ar.html
++++ b/ar.html
+@@ -64,17 +64,34 @@
+     margin-bottom:25px;
+ }
+ 
+-.grid {
+-    display:grid;
+-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+-    gap:40px;
+-}
+-
+-.card img {
+-    width:100%;
+-    height:280px;
+-    object-fit:cover;
+-}
++.grid {
++    display:grid;
++    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
++    gap:40px;
++}
++
++.grid img {
++    width: 100%;
++    display: block;
++}
++
++.card img {
++    width:100%;
++    height:280px;
++    object-fit:cover;
++}
++
++.about-image {
++    width: min(100%, 720px);
++    display: block;
++    margin-top: 40px;
++}
++
++.portfolio-grid img,
++.city-card img {
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++}
+ 
+ .light-bg { background:#f5f5f5; }
+ 
+@@ -92,7 +109,7 @@
+     font-size:14px;
+ }
+ 
+-@media (max-width: 992px) {
++@media (max-width: 992px) {
+ 
+     nav {
+         position: fixed;
+@@ -116,11 +133,48 @@
+         margin: 15px 0;
+     }
+ 
+-    .menu-toggle {
+-        display: block;
+-    }
+-}
+-</style>
++    .menu-toggle {
++        display: block;
++    }
++
++    .hero h1 {
++        font-size: 42px;
++    }
++
++    .section {
++        padding: 80px 8%;
++    }
++}
++
++@media (max-width: 640px) {
++    .hero {
++        min-height: 78vh;
++        padding: 0 6%;
++    }
++
++    .hero h1 {
++        font-size: 32px;
++    }
++
++    .section {
++        padding: 72px 6%;
++    }
++
++    .section h2 {
++        font-size: 28px;
++    }
++
++    .grid {
++        gap: 24px;
++    }
++
++    .card img,
++    .portfolio-grid img,
++    .city-card img {
++        height: 220px;
++    }
++}
++</style>
+ </head>
+ 
+ <body>
+@@ -169,7 +223,7 @@
+ بدلاً من السعي نحو التوسع السريع، نركز على تطوير محفظة عقارية متناسقة تعكس هوية واضحة ومستقرة.
+ هذا النهج يحافظ على سلامة العلامة التجارية ويحمي مصالح الملاك على المدى الطويل.
+ </p>
+-<img src="about-interior.png" style="width:50%; margin-top:40px;">
++<img src="about-interior.png" alt="واجهة داخلية راقية ضمن محفظة زاميرا ستايز" class="about-image">
+ </section>
+ 
+ <section class="section light-bg" id="services">
+@@ -225,19 +279,19 @@
+ يتم تقييم الإضاءة، وجودة المواد، وتناغم التخطيط الداخلي قبل اعتماد أي وحدة ضمن المحفظة.
+ </p>
+ 
+-<div class="grid">
+-<img src="portfolio-1.png" style="width: 100%;">
+-<img src="portfolio-2.png" style="width: 100%;">
+-<img src="portfolio-3.png" style="width: 100%;">
+-</div>
+-</section>
++<div class="grid portfolio-grid">
++<img src="portfolio-1.png" alt="غرفة معيشة ضمن معايير محفظة زاميرا ستايز">
++<img src="portfolio-2.png" alt="غرفة نوم بتشطيبات راقية ضمن المحفظة">
++<img src="portfolio-3.png" alt="تفاصيل تصميم داخلي ضمن محفظة زاميرا ستايز">
++</div>
++</section>
+ 
+ <section class="section light-bg" id="cities">
+ <h2>المدن التي نعمل بها</h2>
+ <div class="grid">
+ 
+-<div>
+-<img src="cairo-skyline.png" style="width: 100%;">
++<div class="city-card">
++<img src="cairo-skyline.png" alt="أفق القاهرة">
+ <h3>القاهرة</h3>
+ <p>
+ نركز في القاهرة على المناطق السكنية الراقية والمجمعات المنظمة والتوسعات العمرانية الحديثة التي تتماشى مع معايير السكن المؤسسي.
+@@ -247,8 +301,8 @@
+ </p>
+ </div>
+ 
+-<div>
+-<img src="alexandria-seafront.png" style="width: 100%;">
++<div class="city-card">
++<img src="alexandria-seafront.png" alt="واجهة الإسكندرية البحرية">
+ <h3>الإسكندرية</h3>
+ <p>
+ في الإسكندرية، ندير بشكل انتقائي عقارات مطلة على البحر أو ضمن مناطق مركزية ذات جودة معمارية واضحة.
+diff --git a/index.html b/index.html
+index 2729dc7f43f75ddb760ee8dc4a7eca75fb4ea623..76301f0511b521a8f8013c47a871a7d196d10c66
+--- a/index.html
++++ b/index.html
+@@ -66,17 +66,34 @@
+     margin-bottom:25px;
+ }
+ 
+-.grid {
+-    display:grid;
+-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+-    gap:40px;
+-}
+-
+-.card img {
+-    width:100%;
+-    height:280px;
+-    object-fit:cover;
+-}
++.grid {
++    display:grid;
++    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
++    gap:40px;
++}
++
++.grid img {
++    width: 100%;
++    display: block;
++}
++
++.card img {
++    width:100%;
++    height:280px;
++    object-fit:cover;
++}
++
++.about-image {
++    width: min(100%, 720px);
++    display: block;
++    margin-top: 40px;
++}
++
++.portfolio-grid img,
++.city-card img {
++    aspect-ratio: 4 / 3;
++    object-fit: cover;
++}
+ 
+ .light-bg { background:#f5f5f5; }
+ 
+@@ -94,7 +111,7 @@
+     font-size:14px;
+ }
+ 
+-@media (max-width: 992px) {
++@media (max-width: 992px) {
+ 
+     nav {
+         position: fixed;
+@@ -118,11 +135,48 @@
+         margin: 15px 0;
+     }
+ 
+-    .menu-toggle {
+-        display: block;
+-    }
+-}
+-</style>
++    .menu-toggle {
++        display: block;
++    }
++
++    .hero h1 {
++        font-size: 44px;
++    }
++
++    .section {
++        padding: 80px 8%;
++    }
++}
++
++@media (max-width: 640px) {
++    .hero {
++        min-height: 78vh;
++        padding: 0 6%;
++    }
++
++    .hero h1 {
++        font-size: 34px;
++    }
++
++    .section {
++        padding: 72px 6%;
++    }
++
++    .section h2 {
++        font-size: 30px;
++    }
++
++    .grid {
++        gap: 24px;
++    }
++
++    .card img,
++    .portfolio-grid img,
++    .city-card img {
++        height: 220px;
++    }
++}
++</style>
+ </head>
+ 
+ <body>
+@@ -169,7 +223,7 @@
+ This ensures consistency across all managed assets, protects brand integrity, and safeguards owner interests. 
+ We operate with long term alignment in mind, building structured partnerships grounded in transparency and performance accountability.
+ </p>
+-<img src="about-interior.png" style="width:50%; margin-top:40px;">
++<img src="about-interior.png" alt="Refined Zamera Stays interior" class="about-image">
+ </section>
+ 
+ <section class="section light-bg" id="services">
+@@ -231,19 +285,19 @@
+ are reviewed prior to onboarding. This ensures portfolio integrity and reinforces long term brand positioning.
+ </p>
+ 
+-<div class="grid">
+-<img src="portfolio-1.png" style="width: 100%;">
+-<img src="portfolio-2.png" style="width: 100%;">
+-<img src="portfolio-3.png" style="width: 100%;">
+-</div>
+-</section>
++<div class="grid portfolio-grid">
++<img src="portfolio-1.png" alt="Zamera Stays portfolio apartment living area">
++<img src="portfolio-2.png" alt="Zamera Stays portfolio bedroom with premium finishes">
++<img src="portfolio-3.png" alt="Zamera Stays portfolio interior design details">
++</div>
++</section>
+ 
+ <section class="section light-bg" id="cities">
+ <h2>Operating Cities</h2>
+ <div class="grid">
+ 
+-<div>
+-<img src="cairo-skyline.png" style="width: 100%;">
++<div class="city-card">
++<img src="cairo-skyline.png" alt="Cairo skyline">
+ <h3>Cairo</h3>
+ <p>
+ In Cairo, Zamera Stays focuses on premium districts, structured residential compounds, 
+@@ -255,8 +309,8 @@
+ </p>
+ </div>
+ 
+-<div>
+-<img src="alexandria-seafront.png" style="width: 100%;">
++<div class="city-card">
++<img src="alexandria-seafront.png" alt="Alexandria seafront">
+ <h3>Alexandria</h3>
+ <p>
+ In Alexandria, we selectively manage waterfront and central residential properties 
+
+tokens used
+35,933
